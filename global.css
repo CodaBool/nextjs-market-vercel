@@ -1,0 +1,289 @@
+/* Default create Nextjs app */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+/* Fade Animation, used in save icon and password strength bar */
+.fadeOnLoad {
+  -webkit-animation: fadein 0.7s;
+  animation: fadein 0.7s;
+}
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.fadeOut {
+  opacity: 0;
+  transition: opacity 1s;
+}
+/* Navigation Bar Bootstrap */
+.navbar {
+  font-size: 1.4em
+}
+.navbar-brand {
+  font-size: 1.2em !important;
+  cursor: pointer;
+}
+.nav-link, .dropdown-item {
+  cursor: pointer;
+}
+/* Form */
+.form-label {
+  font-size: 1.3em;
+  margin: 30px 0 12px 0;
+}
+.signupText {
+  color: rgb(2, 117, 216);
+  margin: 0 auto 0 auto;
+  width: 250px;
+  cursor: pointer;
+  transition: font-size 0.2s, text-shadow 1s;
+}
+.signupText:hover {
+  color: rgb(10, 98, 175);
+  font-size: 1.2em;
+  text-shadow: 0 0 30px rgba(122, 165, 190, 0.3);
+}
+/* Form error messages */
+.errMsg {
+  margin: 3px 0 3px 0;
+  color: #b41724;
+}
+.errMsg::before  {
+  display: inline;
+  content: "⚠ ";
+}
+.redBack {
+  background-color: rgba(190, 29, 29, 0.55) !important;
+}
+/* Browse */
+.product-card {
+  cursor: pointer;
+}
+/* X Icon in Cart */
+.x-icon:hover {
+  cursor: pointer;
+  color: rgb(184, 36, 36);
+  filter: drop-shadow(0 0 2px #fd9d99);
+  -webkit-animation: spin 0.1s linear;
+  animation: spin 0.1s linear;
+}
+
+@-webkit-keyframes spin { 
+  100% { transform:rotate(90deg); } 
+}
+@keyframes spin { 
+  100% { transform:rotate(90deg); } 
+}
+
+@media (max-width: 800px) {
+  h2, h3, h4, h5, h6 {
+    font-size: 1.2em !important;
+  }
+  h1 {
+    font-size: 3.2em !important;
+  }
+}
+
+
+/* Checkout */
+.ship-mail-check label {
+  padding-left: 15px;
+}
+.group div {
+  height: 35px;
+  /* text-align: center; */
+  padding-top: 10px; 
+  cursor: text;
+  padding-left: 20px !important;
+}
+.InputElement {
+}
+.translating {
+  -webkit-animation: sway 3s infinite;
+  animation: sway 3s infinite;
+}
+@-webkit-keyframes sway { 
+  0% { transform: rotate(0deg); } 
+  50% { transform: rotate(-10deg); } 
+  100% { transform: rotate(0deg); } 
+}
+@keyframes sway { 
+  0% { transform: rotate(0deg); } 
+  50% { transform: rotate(-10deg); } 
+  100% { transform: rotate(0deg); } 
+}
+/* .success, message, title, icon, .input.focused, .input.invalid, label, .baseline, .input.StripeElement, .field
+   
+Top to bottom
+CardNumberField
+InputElement
+InputContainer
+.StripeElement, .row, .col, .form-group
+*/
+
+/*override Bootstrap Accordian Style */
+.card-header:not(.colorless) {
+  font-weight: 500;
+  font-size: 1.4em;
+  cursor: default;
+  background: linear-gradient(-45deg, #2a85d450, #527da350, #0d11ee50, #2fe0e050);
+	background-size: 400% 400%;
+  -webkit-animation: gradient 20s ease infinite;
+  animation: gradient 20s ease infinite;
+}
+.expandable {
+  cursor: pointer;
+}
+@-webkit-keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+@keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+/* badge pill */
+.badge:hover {
+  background-color: rgb(0, 132, 255);
+  cursor: pointer;
+}
+
+.money {
+  color: rgb(177, 39, 4);
+}
+
+.box img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0.1; /* toast modal is z-index: 1 so this must be below that */
+}
+.box .shine {
+  width: 100%;
+}
+.shine {
+  background: white;
+  background-image: linear-gradient(to right, white 0%, rgb(240, 236, 236) 20%, white 40%, white 100%);
+  background-size: 800px 800px; 
+  animation: linear shine 1s infinite;
+}
+@keyframes shine {
+  0% { background-position: -800px 0; }
+  100% { background-position: 800px 0; }
+}
+
+@media (max-width: 576px) { /* Small devices (landscape phones, 576px and DOWN) */ 
+  .box .shine, .box img {
+    height: 232px;
+    width: 232px;
+  }
+}
+@media (min-width: 576px) { /* Small devices (landscape phones, 576px and UP) */ 
+  .box .shine, .box img {
+    height: 412px;
+  }
+}
+@media (min-width: 768px) { /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+  .box .shine, .box img {
+    height: 232px;
+  }
+}
+@media (min-width: 992px) { /* Large devices (desktops, 992px and up) */
+  .box .shine, .box img {
+    height: 352px;
+  }
+}
+@media (min-width: 1200px) { /* Extra large devices (large desktops, 1200px and up) */
+  .box .shine, .box img {
+    height: 443px;
+  }
+}
+/* NavBox */
+a {
+  text-decoration: none;
+}
+.navBox-btn {
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
+  color: black;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: auto;
+  border-bottom: 3px solid black;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.navBox a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #45488144;
+  transform: translateX(-100%);
+}
+
+.navBox a:hover {
+  color: black;
+  text-decoration: none;
+}
+.navBox a:hover:before {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+#img-home {
+  position: absolute;
+  bottom:116px;
+  right:0px;
+  border-radius: 20px 20px 0px 0px;
+}
+#img-code {
+  border-radius: 0px 0px 20px 20px;
+}
+.navBox {
+	position: fixed;
+	right: 25px;
+  top:50%;
+  height:120px;
+  font-size: 1.2em;
+  width:12%;
+}
+.navBox img {
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  display: block;
+  margin: auto;
+}
+@media (max-width: 991px) {
+  .navBox {
+    width:20%;
+  }
+  .navBox-btn {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
