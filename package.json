@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "heroku-postbuild": "npm run build"
+    "build": "next build"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^1.1.2",
