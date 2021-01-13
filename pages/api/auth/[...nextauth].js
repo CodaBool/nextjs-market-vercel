@@ -79,6 +79,6 @@ export default (req, res) => {
     },
     debug: true,
     secret: process.env.SECRET,
-    database: process.env.DATABASE_URL,
+    // database: process.env.DATABASE_URL,
   })
 }
