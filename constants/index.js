@@ -276,6 +276,8 @@ export function makeQuantityArr(quantity) {
   return quantityOptions
 }
 
+// BETTER IMPLIMENTATION
+// Array.from({length: 10}, (x, i) => i + 1)
 export function makeArr(quantity) { // no max limit
   let quantityOptions = []
   for (let i = 1; i < quantity + 1; i++){
